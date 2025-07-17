@@ -4,51 +4,60 @@
   top: 0;
   left: 0;
   height: 100vh;
-  width: 220px;
-  background-color: #1f2a48;
-  color: #fff;
-  padding: 1.5rem;
+  width: 280px; /* roomy width */
+  background-color: #16203b; /* deeper navy */
+  color: #e6e8ea; /* soft off-white */
+  padding: 2.5rem 2rem;
   display: flex;
   flex-direction: column;
-  z-index: 999;
+  box-shadow: 3px 0 12px rgba(0, 0, 0, 0.25);
+  font-family: "IBM Plex Sans", "Inter", sans-serif;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
 }
 
 .logo {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #cddc39;
-  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #a3d063; /* calm lime green */
+  letter-spacing: 1.2px;
+  margin-bottom: 3.5rem;
+  user-select: none;
 }
 
-/* Desktop Nav Links */
 .nav-links {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 2.4rem; /* vertical spacing */
+  padding-top: 1.5rem; /* GAP ABOVE FIRST LINK */
 }
 
 .nav-link {
-  color: white;
+  color: #e6e8ea;
   text-decoration: none;
-  font-weight: 500;
-  font-size: 1rem;
+  font-weight: 600;
+  font-size: 1.15rem;
+  padding: 0.3rem 0;
   position: relative;
-}
-
-.nav-link.active {
-  color: #cddc39;
-  font-weight: 700;
+  transition: color 0.25s ease, transform 0.2s ease;
+  cursor: pointer;
 }
 
 .nav-link::after {
   content: "";
   position: absolute;
-  bottom: -4px;
+  bottom: -6px;
   left: 0;
   width: 0%;
-  height: 2px;
-  background-color: #ffd700;
+  height: 3px;
+  background-color: #a3d063;
+  border-radius: 4px;
   transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #a3d063;
+  transform: translateX(5px);
 }
 
 .nav-link:hover::after,
@@ -56,7 +65,12 @@
   width: 100%;
 }
 
-/* === Mobile View === */
+.nav-link.active {
+  color: #a3d063;
+  font-weight: 700;
+}
+
+/* === Mobile styles remain unchanged === */
 @media screen and (max-width: 768px) {
   .navbar {
     position: relative;
@@ -72,7 +86,7 @@
   .logo {
     margin: 0;
     color: #cddc39;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 
   .hamburger {
@@ -102,7 +116,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 2.5rem;
     padding: 2rem;
     transform: translateY(-100%);
     transition: transform 0.4s ease, opacity 0.4s ease;
@@ -118,7 +132,7 @@
   }
 
   .nav-link {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 600;
   }
 }

@@ -17,17 +17,19 @@ html,
 
 /* === Page Layout === */
 .page {
-  padding-top: 100px;
+  padding-top: 80px; /* for fixed navbar height */
+  max-width: 960px;
+  margin-left: 280px; /* sidebar width */
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  max-width: 960px;
-  margin: 0 auto;
+  transition: margin-left 0.3s ease;
 }
 
-@media (min-width: 769px) {
+/* Reset margin on smaller screens where sidebar is not visible */
+@media screen and (max-width: 768px) {
   .page {
-    margin-left: 240px; /* leave space for sidebar */
-    padding-top: 2rem;
+    margin-left: 0;
+    padding-top: 80px; /* keep space for mobile top navbar */
   }
 }
 
@@ -37,12 +39,15 @@ h2,
 h3 {
   color: #1f2a48;
   margin-bottom: 1rem;
+  font-weight: 700;
 }
 
 p {
   color: #333;
   line-height: 1.6;
   margin-bottom: 1rem;
+  font-weight: 400;
+  font-size: 1rem;
 }
 
 /* === Footer === */
@@ -53,6 +58,7 @@ p {
   padding: 1rem 0;
   font-size: 0.9rem;
   margin-top: 4rem;
+  user-select: none;
 }
 
 /* === Utility Classes === */
