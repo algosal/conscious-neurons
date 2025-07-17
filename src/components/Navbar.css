@@ -73,14 +73,18 @@
 /* === Mobile styles remain unchanged === */
 @media screen and (max-width: 768px) {
   .navbar {
-    position: relative;
+    position: fixed; /* CHANGE from relative to fixed */
+    top: 0; /* pin it to the top */
+    left: 0;
     width: 100%;
-    height: auto;
+    height: 64px; /* fixed height matching desktop navbar height */
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     background-color: #1f2a48;
-    padding: 1rem 1.5rem;
+    padding: 0 1.5rem; /* vertically zero padding, horizontal 1.5rem */
+    z-index: 1100; /* above nav-links */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   }
 
   .logo {
@@ -94,7 +98,7 @@
     background: none;
     border: none;
     cursor: pointer;
-    z-index: 1001;
+    z-index: 1200; /* above navbar */
   }
 
   .hamburger span {
@@ -108,10 +112,10 @@
 
   .nav-links {
     position: fixed;
-    top: 0;
+    top: 64px; /* below the fixed navbar */
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - 64px);
     background-color: #1f2a48;
     flex-direction: column;
     justify-content: center;
