@@ -38,8 +38,8 @@ This website showcases our vision, services, and company story with a clean, mod
 1. Clone the repository
 
    ```bash
-   git clone https://github.com/yourusername/conscious-neurons-website.git
-   cd conscious-neurons-website
+   git clone https://github.com/algosal/conscious-neurons.git
+   cd conscious-neurons
 
    ```
 
