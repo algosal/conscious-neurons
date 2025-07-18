@@ -4,7 +4,7 @@ import "../App.css";
 export default function About() {
   return (
     <div className="page">
-      <h2>AboutConscious Neurons</h2>
+      <h2>Conscious Neurons</h2>
 
       <p>
         Conscious Neurons LLC is an AI-first software company dedicated to
