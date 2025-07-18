@@ -34,6 +34,9 @@ export default function Navbar() {
         </NavLink>
         <NavLink to="/services" className="nav-link" onClick={closeMenu}>
           Services
+        </NavLink>{" "}
+        <NavLink to="/ceo" className="nav-link" onClick={closeMenu}>
+          CEO
         </NavLink>
       </nav>
     </header>

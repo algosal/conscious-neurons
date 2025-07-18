@@ -25,6 +25,50 @@ html,
   transition: margin-left 0.3s ease;
 }
 
+.ceo-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  margin: 3rem auto;
+  max-width: 900px;
+  padding: 0 1.5rem;
+}
+
+.ceo-photo-container {
+  flex: 1 1 250px;
+  max-width: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.ceo-photo {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.ceo-bio {
+  flex: 2 1 400px;
+  font-family: "Inter", sans-serif;
+  color: #2c3e50;
+}
+
+.ceo-bio h2 {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #1f2a48;
+}
+
+.ceo-bio p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
 /* Reset margin on smaller screens where sidebar is not visible */
 @media screen and (max-width: 768px) {
   .page {
