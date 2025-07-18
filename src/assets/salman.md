@@ -20,7 +20,7 @@ Salman believes AI is more than just technology; it is a co-evolutionary force t
 ## Connect
 
 - Website: [consciousneurons.com](https://consciousneurons.com)
-- Email: salman@example.com
+- Email: salman@salmansaeed.us
 - Phone: +1 (347) 325-7227
 
 ---
